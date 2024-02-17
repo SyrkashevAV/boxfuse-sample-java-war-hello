@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+RUN apt update -y
 RUN apt install tomcat9 -y
 RUN apt install maven -y
 EXPOSE 8080
