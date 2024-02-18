@@ -6,5 +6,5 @@ RUN apt install tomcat9 -y
 RUN apt install maven -y
 EXPOSE 8080
 RUN rm -rf ./target/
-RUN mvn package
+RUN cd /home/pilot/boxfuse-sample-java-war-hello/ && mvn package
 COPY ./target/*.war /var/lib/tomcat9/webapps/
