@@ -13,4 +13,5 @@ RUN ls -la /pilot
 RUN ls -lda /pilot/
 RUN mvn package
 RUN ls -la /pilot/target
-COPY /pilot/target/hello-1.0.war /var/lib/tomcat9/webapps/
+#COPY /pilot/target/hello-1.0.war /var/lib/tomcat9/webapps/
+RUN cp /pilot/target/hello-1.0.war /var/lib/tomcat9/webapps/
