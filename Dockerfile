@@ -10,3 +10,5 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git ./pil
 WORKDIR /pilot
 RUN mvn package
 RUN cp target/*.war /var/lib/tomcat9/webapps/
+ENTRYPOINT ["top", "-b"]
+CMD ["-c"]
